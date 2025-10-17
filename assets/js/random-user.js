@@ -84,8 +84,6 @@ function generateFakeData(fields) {
 
 
   const data = {};
-  // let thisFirstName = randomItem(firstNames);
-  // let thisLastName = randomItem(lastNames);
   for (const field of fields) {
     switch (field) {
       case "firstName":
@@ -107,10 +105,10 @@ function generateFakeData(fields) {
         data[field] = Math.floor(Math.random() * 60) + 18;
         break;
       case "city":
-        data[field] = randomItem(cities);
+        data[field] = location.city;
         break;
       case "country":
-        data[field] = randomItem(countries);
+        data[field] = location.country;
         break;
       case "phone":
         data[field] = "+44" + Math.floor(Math.random() * 900000000 + 100000000);
