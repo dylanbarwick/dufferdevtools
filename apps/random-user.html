@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6134554981366683"
+    crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <title>Random User Data Generator</title>
 
@@ -13,70 +15,70 @@
     <a href="/" class="homelink">Home</a>
     <h1>Random User Data Generator</h1>
 
-        <form id="userForm">
-          <h3>Select Common Fields</h3>
-          <div class="controls">
-            <div class="grid grid-checkboxes">
-              <label><input type="checkbox" name="fields" value="firstName" checked> First Name</label>
-              <label><input type="checkbox" name="fields" value="lastName" checked> Last Name</label>
-              <label><input type="checkbox" name="fields" value="email" checked> Email</label>
-              <label><input type="checkbox" name="fields" value="username"> Username</label>
-              <label><input type="checkbox" name="fields" value="password"> Password</label>
-              <label><input type="checkbox" name="fields" value="age"> Age</label>
-              <label><input type="checkbox" name="fields" value="city"> City</label>
-              <label><input type="checkbox" name="fields" value="country"> Country</label>
-              <label><input type="checkbox" name="fields" value="phone"> Phone</label>
-              <label><input type="checkbox" name="fields" value="gender"> Gender</label>
-            </div>
-
-          </div>
-          <h3>Names</h3>
-              <div class="gender-select">
-                <label><input type="radio" name="genderOption" value="male"> Only male</label>
-                <label><input type="radio" name="genderOption" value="female"> Only female</label>
-                <label><input type="radio" name="genderOption" value="either" checked> Either</label>
-              </div>
-          <h3>Custom Fields</h3>
-          <div class="controls">
-            <div class="grid-fields">
-              <input type="text" placeholder="Custom field 1" class="customField">
-              <input type="text" placeholder="Custom field 2" class="customField">
-              <input type="text" placeholder="Custom field 3" class="customField">
-              <input type="text" placeholder="Custom field 4" class="customField">
-            </div>
-          </div>
-
-          <h3>Options</h3>
-          <div>
-
-            <div class="misc-option">
-              Number of records:
-              <input type="number" id="recordCount" value="5" min="1" max="1000">
-            </div>
-            <div class="misc-option">
-              Format:
-              <select id="outputFormat">
-                <option value="json">JSON</option>
-                <option value="csv">CSV</option>
-                <option value="tsv">TSV</option>
-              </select>
-            </div>
-
-          </div>
-
-          <button type="button" class="btn" id="generateBtn">Generate</button>
-        </form>
-
-        <div class="output-card" aria-label="Generated output">
-          <textarea id="output" readonly rows="12"></textarea>
-          <button id="copyBtn" class="btn">Copy Output</button>
+    <form id="userForm">
+      <h3>Select Common Fields</h3>
+      <div class="controls">
+        <div class="grid grid-checkboxes">
+          <label><input type="checkbox" name="fields" value="firstName" checked> First Name</label>
+          <label><input type="checkbox" name="fields" value="lastName" checked> Last Name</label>
+          <label><input type="checkbox" name="fields" value="email" checked> Email</label>
+          <label><input type="checkbox" name="fields" value="username"> Username</label>
+          <label><input type="checkbox" name="fields" value="password"> Password</label>
+          <label><input type="checkbox" name="fields" value="age"> Age</label>
+          <label><input type="checkbox" name="fields" value="city"> City</label>
+          <label><input type="checkbox" name="fields" value="country"> Country</label>
+          <label><input type="checkbox" name="fields" value="phone"> Phone</label>
+          <label><input type="checkbox" name="fields" value="gender"> Gender</label>
         </div>
+
+      </div>
+      <h3>Names</h3>
+      <div class="gender-select">
+        <label><input type="radio" name="genderOption" value="male"> Only male</label>
+        <label><input type="radio" name="genderOption" value="female"> Only female</label>
+        <label><input type="radio" name="genderOption" value="either" checked> Either</label>
+      </div>
+      <h3>Custom Fields</h3>
+      <div class="controls">
+        <div class="grid-fields">
+          <input type="text" placeholder="Custom field 1" class="customField">
+          <input type="text" placeholder="Custom field 2" class="customField">
+          <input type="text" placeholder="Custom field 3" class="customField">
+          <input type="text" placeholder="Custom field 4" class="customField">
+        </div>
+      </div>
+
+      <h3>Options</h3>
+      <div>
+
+        <div class="misc-option">
+          Number of records:
+          <input type="number" id="recordCount" value="5" min="1" max="1000">
+        </div>
+        <div class="misc-option">
+          Format:
+          <select id="outputFormat">
+            <option value="json">JSON</option>
+            <option value="csv">CSV</option>
+            <option value="tsv">TSV</option>
+          </select>
+        </div>
+
+      </div>
+
+      <button type="button" class="btn" id="generateBtn">Generate</button>
+    </form>
+
+    <div class="output-card" aria-label="Generated output">
+      <textarea id="output" readonly rows="12"></textarea>
+      <button id="copyBtn" class="btn">Copy Output</button>
+    </div>
   </main>
 
 
 
-<div id="wisdomDisplay" class="wisdom-box container"></div>
-<script src="/wisdoms/wisdom.js"></script>
+  <div id="wisdomDisplay" class="wisdom-box container"></div>
+  <script src="/wisdoms/wisdom.js"></script>
 
   <script src="/assets/js/random-user.js"></script>
 </body>

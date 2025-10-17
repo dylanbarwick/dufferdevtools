@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Base64 Encoder/Decoder</title>
-<link rel="stylesheet" href="/assets/css/devtools.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6134554981366683"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 Encoder/Decoder</title>
+  <link rel="stylesheet" href="/assets/css/devtools.css">
 </head>
+
 <body>
-<div class="container">
-  <a href="/" class="homelink">Home</a>
-  <h1>Base64 Encoder / Decoder</h1>
+  <div class="container">
+    <a href="/" class="homelink">Home</a>
+    <h1>Base64 Encoder / Decoder</h1>
 
-  <details class="info-box">
-    <summary><strong>How It Behaves (Forensic-Level)</strong></summary>
-    <div class="info-content">
-      <p><strong>Encoding:</strong> When you encode text or upload a file, this app converts its bytes into Base64 using <code>btoa()</code>. Files are read as binary (ArrayBuffer) and safely converted to Base64 chunks.</p>
-      <p><strong>Decoding:</strong> When you decode, it first checks if your Base64 string represents binary or UTF-8 text.
-      - If it looks like printable UTF-8, it’s returned as plain text.
-      - Otherwise, it’s treated as binary, and you can download it as a file.
-      Invalid Base64 strings are caught with error messages.</p>
-      <p><strong>Safety limits:</strong> Files are capped at ~1 MB. This keeps browser memory safe and prevents slowdowns.
-      You can paste larger Base64 strings, but decoding binary beyond ~1 MB may fail in some browsers.</p>
+    <details class="info-box">
+      <summary><strong>How It Behaves (Forensic-Level)</strong></summary>
+      <div class="info-content">
+        <p><strong>Encoding:</strong> When you encode text or upload a file, this app converts its bytes into Base64
+          using <code>btoa()</code>. Files are read as binary (ArrayBuffer) and safely converted to Base64 chunks.</p>
+        <p><strong>Decoding:</strong> When you decode, it first checks if your Base64 string represents binary or UTF-8
+          text.
+          - If it looks like printable UTF-8, it’s returned as plain text.
+          - Otherwise, it’s treated as binary, and you can download it as a file.
+          Invalid Base64 strings are caught with error messages.</p>
+        <p><strong>Safety limits:</strong> Files are capped at ~1 MB. This keeps browser memory safe and prevents
+          slowdowns.
+          You can paste larger Base64 strings, but decoding binary beyond ~1 MB may fail in some browsers.</p>
+      </div>
+    </details>
+
+    <div class="input-section">
+      <textarea id="input" placeholder="Enter text or Base64 here..."></textarea>
     </div>
-  </details>
+    <div class="file-section">
+      <label for="fileInput">Choose file:</label>
+      <input type="file" id="fileInput" />
+      <button id="resetFile" type="button">Reset File</button>
+      <div id="fileInfo" style="font-size:0.9em; color:#555; margin-top:4px;"></div>
+    </div>
 
-  <div class="input-section">
-    <textarea id="input" placeholder="Enter text or Base64 here..."></textarea>
-  </div>
-  <div class="file-section">
-    <label for="fileInput">Choose file:</label>
-    <input type="file" id="fileInput" />
-    <button id="resetFile" type="button">Reset File</button>
-    <div id="fileInfo" style="font-size:0.9em; color:#555; margin-top:4px;"></div>
-  </div>
+    <div class="controls">
+      <button id="encode">Encode</button>
+      <button id="decode">Decode</button>
+    </div>
 
-  <div class="controls">
-    <button id="encode">Encode</button>
-    <button id="decode">Decode</button>
-  </div>
-
-  <div class="reset-row">
-    <button id="resetAll">Reset All</button>
-  </div>
+    <div class="reset-row">
+      <button id="resetAll">Reset All</button>
+    </div>
 
 
-  <div class="output-section">
-    <textarea id="output" placeholder="Result will appear here..." readonly></textarea>
-    <div class="buttons">
-      <button id="copyOutput">Copy to Clipboard</button>
-      <!-- <button id="downloadOutput" style="display:block;">Download File</button> -->
-      <a href id="downloadOutput" style="display:none;">Download File</a>
+    <div class="output-section">
+      <textarea id="output" placeholder="Result will appear here..." readonly></textarea>
+      <div class="buttons">
+        <button id="copyOutput">Copy to Clipboard</button>
+        <!-- <button id="downloadOutput" style="display:block;">Download File</button> -->
+        <a href id="downloadOutput" style="display:none;">Download File</a>
+      </div>
     </div>
   </div>
-</div>
 
-<div id="wisdomDisplay" class="wisdom-box container"></div>
-<script src="/wisdoms/wisdom.js"></script>
+  <div id="wisdomDisplay" class="wisdom-box container"></div>
+  <script src="/wisdoms/wisdom.js"></script>
 
-<script src="/assets/js/base64.js"></script>
+  <script src="/assets/js/base64.js"></script>
 </body>
+
 </html>
