@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Text Case Converter</title>
+  <meta name="description" content="Convert text into upper, lower, title, sentence, camelCase, PascalCase, snake_case and kebab-case. Copy results with one click." />
+
+  <link rel="stylesheet" href="/assets/css/devtools.css">
+</head>
+<body>
+  <main class="container">
+    <a href="/" class="homelink">Home</a>
+    <h1>Text Case Converter</h1>
+    <p class="lead">Convert your text into upper, lower, title, sentence, camelCase, PascalCase, snake_case or kebab-case. Click Convert, then Copy.</p>
+
+    <div class="card" role="region" aria-labelledby="tc-heading">
+      <label for="inputText">Enter your text</label>
+      <textarea id="inputText" placeholder="Paste or type text here…">I choose to do this thing</textarea>
+
+      <div class="controls" style="margin-top:.75rem;">
+        <label for="caseSelect" class="muted" style="margin-right:.5rem;">Choose conversion</label>
+        <select id="caseSelect" aria-label="Conversion method">
+          <option value="upper">UPPER CASE</option>
+          <option value="lower">lower case</option>
+          <option value="title">Title Case</option>
+          <option value="sentence">Sentence case</option>
+          <option value="camel">camelCase</option>
+          <option value="pascal">PascalCase</option>
+          <option value="snake">snake_case</option>
+          <option value="kebab">kebab-case</option>
+        </select>
+
+        <button id="convert" aria-label="Convert text">Convert</button>
+      </div>
+
+      <div class="output-section" aria-live="polite">
+        <label for="output" style="margin-top:.75rem;">Result</label>
+        <textarea id="output" readonly placeholder="Converted text will appear here"></textarea>
+        <button id="copyResult" class="" title="Copy result to clipboard">Copy to clipboard</button>
+      </div>
+
+      <div id="wisdom" aria-hidden="false"></div>
+    </div>
+  </main>
+  <div id="wisdomDisplay" class="wisdom-box container"></div>
+<script src="/wisdoms/wisdom.js"></script>
+
+  <script src="/assets/js/text-case-converter.js"></script>
+</body>
+</html>

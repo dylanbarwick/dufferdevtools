@@ -1,0 +1,394 @@
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+h1 { text-align: left; font-size: 2rem; margin-bottom: 0.5rem; }
+p { text-align: left; margin-bottom: 1rem; }
+.controls { display: flex; gap: 1rem; align-items: center; margin: 1rem 0; }
+.controls input { width: 4rem; padding: 0.2rem; }
+.controls button { padding: 0.5rem 1rem; cursor: pointer; background: #0070f3; color: #fff; border: none; border-radius: 4px; }
+.controls button:hover { background: #005bb5; }
+
+a.homelink {
+  width: 100%;
+  background-color: #adadad;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+a.homelink:hover {
+  background-color: #9a9a9a;
+}
+
+.homepage section h1 {
+  color: #0070f3;
+}
+
+.homepage section h1,
+.homepage section .intro-text {
+  text-align: center;
+}
+
+.homepage section .intro-text {
+  background-color: #f3f3f3;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px #9a9a9a solid;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.homepage a.card h2.link-heading,
+.homepage a.card .link-text {
+  color: #0070f3;
+}
+
+.grid.grid-checkboxes,
+.grid.grid-fields {
+  width: 100%;
+}
+.controls .grid-checkboxes input,
+.controls .grid-fields input {
+  margin-bottom: 0.5rem;
+  width: auto;
+}
+.misc-option {
+  margin-bottom: 0.3rem;
+  width: 100%;
+}
+.misc-option input {
+  margin-left: 0.3rem;
+}
+
+pre { background: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; overflow-x: auto; max-height: 400px; }
+
+.tokens { margin-top: 1rem; }
+.token-grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 0.5rem;
+}
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 599px) {
+  .grid { grid-template-columns: 1fr; }
+}
+.token-btn {
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+}
+.token-btn:hover { background: #ddd; }
+.token-btn .copy-icon { margin-left: 0.5rem; font-size: 0.9rem; }
+#wisdom { margin-top: 1rem; text-align: center; font-style: italic; color: #555; }
+
+.stacked .field-row {
+  margin-bottom: 0.8rem;
+}
+.note {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.card {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+textarea {
+  width: 100%;
+  font-family: monospace;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  display: block;
+  box-sizing: border-box;
+}
+
+.controls-wrapper {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+
+.output-section {
+  position: relative;
+}
+
+.copy-btn {
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 0.9rem;
+  background: #f3f4f6;
+  color: #111;
+  border: 1px solid #ddd;
+}
+
+.copy-btn:hover {
+  background: #e5e7eb;
+}
+
+.columns {
+  display: flex;
+  gap: 1rem;
+}
+
+.column {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+}
+
+.column-left {
+  width: 40%;
+}
+
+.column-left .form-element-distinct {
+  margin-bottom: 0.8rem;
+}
+
+.column-right {
+  min-width: 50%;
+}
+
+/* Base64 styles */
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  font-family: monospace;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  margin: 0.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #0070f3;
+  color: #fff;
+}
+
+button:hover {
+  background: #005bb5;
+}
+
+.info-box {
+  background: #eef3f7;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.info-box summary {
+  cursor: pointer;
+}
+
+.info-content {
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.3rem;
+  text-align: left;
+}
+
+/** Regexp tester **/
+
+.regex-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 6px;
+  background: #fafafa;
+  font-family: monospace;
+  margin-bottom: 0.75rem;
+}
+
+.regex-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.regex-delim {
+  color: #444;
+  font-weight: bold;
+}
+
+.regex-flags {
+  min-width: 2em;
+  text-align: right;
+  font-weight: bold;
+  color: #666;
+  font-family: monospace;
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight-container {
+  position: relative;
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+/* both textarea and overlay share exact dimensions */
+.highlight-container textarea,
+.highlight-container .highlight-overlay {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
+  margin-bottom: 0;
+}
+
+.highlight-container .highlight-overlay {
+  border: 1px solid transparent;
+  margin-bottom: 1rem;
+}
+
+#textareaWrapper {
+  margin-bottom: 1rem;
+}
+
+/* overlay sits underneath textarea */
+.highlight-overlay {
+  position: absolute;
+  inset: 0;
+  /* top/right/bottom/left = 0 */
+  color: transparent;
+  background: #fff;
+  /* same as textarea background */
+  z-index: 0;
+  pointer-events: none;
+  top: 1px;
+}
+
+/* textarea sits above, fully transparent background */
+.highlight-container textarea {
+  position: relative;
+  background: transparent;
+  color: black;
+  z-index: 1;
+  resize: vertical;
+}
+
+/* highlight color */
+mark {
+  background: #ffea70;
+  color: transparent;
+}
+
+
+#loadDemoText {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0074cc;
+}
+
+#loadDemoText:hover {
+  color: #004d99;
+}
+
+/** Random user data **/
+.gender-select {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.gender-select label {
+  font-size: 0.9rem;
+}
+
+/** Wisdome styling **/
+.wisdom-box {
+  text-align: center;
+}
+
+.wisdom-line {
+  width: 100%;
+  display: block;
+  background-color: #adadad;
+  padding: 0.6rem 0;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.wisdom-line.wisdom {
+  background-color: #9999ff;
+}
+
+.wisdom-line.unwisdom {
+  background-color: #545488;
+  color: #ffffff;
+}

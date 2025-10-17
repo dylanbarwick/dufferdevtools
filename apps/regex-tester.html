@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regex Tester</title>
+
+  <link rel="stylesheet" href="/assets/css/devtools.css">
+</head>
+
+<body>
+  <main class="container">
+    <a href="/" class="homelink">Home</a>
+    <h1>Regex Tester</h1>
+
+    <div class="row">
+      <label for="inputText">Input Text:</label>
+      <div class="highlight-container">
+        <div id="highlightOverlay" class="highlight-overlay"></div>
+        <div id="textareaWrapper">
+          <textarea id="inputText" placeholder="Paste text to test your regex here..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="regex">Regular Expression:</label>
+      <div class="regex-wrapper">
+        <span class="regex-delim">/</span>
+        <input type="text" id="regex" placeholder="Enter your pattern (e.g. ([a])\\w+)" />
+        <span class="regex-delim">/</span>
+        <div id="regexFlags" class="regex-flags"></div>
+      </div>
+
+      <div class="controls">
+        <label><input type="checkbox" id="flagGlobal"> g</label>
+        <label><input type="checkbox" id="flagInsensitive"> i</label>
+        <label><input type="checkbox" id="flagMultiline"> m</label>
+        <select id="mode">
+          <option value="match">Match</option>
+          <option value="replace">Replace</option>
+        </select>
+        <input type="text" id="replacement" placeholder="Replacement text" class="hidden" />
+      </div>
+
+      <div class="controls">
+        <label for="presetTests">Quick tests:</label>
+        <select id="presetTests">
+          <option value="">— Select a test —</option>
+          <option value="upperLetters">Match: Every uppercase letter</option>
+          <option value="upperWords">Match: Words starting with uppercase</option>
+          <option value="vowelWords">Match: Vowel and rest of word</option>
+          <option value="replaceUpper">Replace: Uppercase with #</option>
+          <option value="replaceBrackets">Replace: Capitalised words in <<>> brackets</option>
+          <option value="replaceVowels">Replace: Vowel+rest with @</option>
+        </select>
+
+        <a href="#" id="loadDemoText">Load demo text</a>
+      </div>
+
+
+      <div class="controls">
+        <button id="testRegex">Test</button>
+        <button id="resetAll">Reset</button>
+        <button id="copyBare">Copy Bare Pattern</button>
+        <button id="copyFull">Copy Full Literal</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="output">Output:</label>
+      <textarea id="output" readonly></textarea>
+    </div>
+  </main>
+
+
+
+  <div id="wisdomDisplay" class="wisdom-box container"></div>
+  <script src="/wisdoms/wisdom.js"></script>
+  <script src="/assets/js/regex-tester.js"></script>
+</body>
+
+</html>

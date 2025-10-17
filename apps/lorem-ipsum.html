@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dummy Text Generator</title>
+  <link rel="stylesheet" href="/assets/css/devtools.css">
+
+</head>
+
+<body>
+  <main class="container" role="main" aria-labelledby="title">
+    <a href="/" class="homelink">Home</a>
+    <header>
+      <div>
+        <h1 id="title">Dummy Text Generator</h1>
+        <p class="lead">Generate plain <em>lorem ipsum</em> paragraphs and copy them to clipboard.</p>
+      </div>
+    </header>
+
+    <section class="columns" aria-live="polite">
+
+      <div class="column column-left">
+        <div aria-label="Generator options">
+          <div class="form-element-distinct">
+            <label class="field" for="words">Total words</label>
+            <div class="field-row">
+              <input id="words" type="number" min="100" value="300" class="small" aria-describedby="wordsHelp" />
+              <div class="note" id="wordsHelp">Minimum 100 words</div>
+            </div>
+          </div>
+
+          <div class="form-element-distinct">
+            <label class="field" for="paras">Number of paragraphs</label>
+            <div class="field-row">
+              <input id="paras" type="number" min="1" value="3" class="small" aria-describedby="parasHelp" />
+              <div class="note" id="parasHelp">Minimum 1 paragraph</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-element-distinct">
+          <label class="field">Options</label>
+          <div class="field-row">
+            <label style="font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px">
+              <input id="capitalise_paragraph" type="checkbox" checked /> Capitalise first word of each paragraph
+            </label>
+          </div>
+          <div class="field-row">
+            <label style="font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px">
+              <input id="capitalise_sentence" type="checkbox" checked /> Capitalise first word of each sentence
+            </label>
+          </div>
+        </div>
+        <div class="controls" role="group" aria-label="Output controls">
+          <div id="message" class="note" aria-live="polite"></div>
+          <div style="flex:1"></div>
+          <button id="generateBtn" class="btn btn-primary" title="Generate dummy text">Generate</button>
+        </div>
+
+        <div id="error" class="error" role="alert" hidden></div>
+      </div>
+
+      <div class="column column-right">
+        <div class="output-card" aria-label="Generated output">
+          <label for="output">Generated dummy text (plain text paragraphs separated by blank lines)</label>
+          <textarea id="output" readonly aria-readonly="true" spellcheck="false" rows="5"></textarea>
+
+          <div class="controls" role="group" aria-label="Output controls">
+            <div id="message" class="note" aria-live="polite"></div>
+            <div style="flex:1"></div>
+            <button id="copyBtn" class="btn btn-ghost" title="Copy dummy text to clipboard">Copy dummy text to
+              clipboard</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+<div id="wisdomDisplay" class="wisdom-box container"></div>
+<script src="/wisdoms/wisdom.js"></script>
+
+  <script src="/assets/js/lorem-ipsum.js"></script>
+</body>
+
+</html>

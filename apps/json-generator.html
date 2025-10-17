@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dummy JSON Generator</title>
+<meta name="description" content="Generate dummy JSON for testing APIs or front-end development. Use templates and tokens to create realistic data.">
+
+<link rel="stylesheet" href="/assets/css/devtools.css">
+</head>
+<body>
+<main class="container">
+  <a href="/" class="homelink">Home</a>
+  <h1>Dummy JSON Generator</h1>
+  <p>Paste your JSON template below and use tokens like <code>||firstName||</code> or <code>||increment||</code>. Click a token to insert it at the cursor, or click the 📋 icon to copy it.</p>
+
+  <textarea id="template" rows="10">
+  {
+    "what-is-this": "sample json structure",
+    "id": "||increment||",
+    "name": {
+      "first": "||firstName||",
+      "last": "||lastName||"
+    },
+    "email": "||email||"
+  }</textarea>
+
+  <div class="controls">
+    <label>Number of entries:
+      <input id="count" type="number" value="5" min="1" max="1000">
+    </label>
+    <button id="generate">Generate JSON</button>
+  </div>
+
+  <h3>Available Tokens</h3>
+  <div class="tokens">
+    <div class="token-grid">
+      <button class="token-btn" data-token="||firstName||" title="Random first name">||firstName|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||lastName||" title="Random last name">||lastName|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||fullName||" title="Random full name">||fullName|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||email||" title="Random email">||email|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||city||" title="Random city">||city|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||country||" title="Random country">||country|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||age||" title="Random age">||age|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||randomNumber||" title="Random number">||randomNumber|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||randomLoremIpsum||" title="Random lorem ipsum">||randomLoremIpsum|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||uuid||" title="Random UUID">||uuid|| <span class="copy-icon">📋</span></button>
+      <button class="token-btn" data-token="||increment||" title="Incrementing number">||increment|| <span class="copy-icon">📋</span></button>
+    </div>
+  </div>
+
+  <div class="output-header">
+    <h2>Output</h2>
+  </div>
+
+  <pre id="output"></pre>
+    <button id="copy-json" title="Copy generated JSON">Copy JSON</button>
+</main>
+
+
+<div id="wisdomDisplay" class="wisdom-box container"></div>
+<script src="/wisdoms/wisdom.js"></script>
+
+<script src="/assets/js/json-generator.js"></script>
+</body>
+</html>
